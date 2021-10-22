@@ -29,7 +29,8 @@ def authenticate(login, password):
         try:
             driver.find_element(By.XPATH, button).click()
             break
-        except Exception:
+        except Exception as e:
+            print(e)
             pass
 
 

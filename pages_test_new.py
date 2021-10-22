@@ -1,13 +1,13 @@
 from selenium.webdriver import Chrome
-from pages import OldDropdownPage
+from pages import NewDropdownPage
 
 
 def test_2():
     driver = Chrome()
-    dropdown = OldDropdownPage(driver)
+    dropdown = NewDropdownPage(driver)
 
-    dropdown.check_options_in_dropdown_1()
-    dropdown.choose_value_in_dropdown_1()
+    dropdown.dropdown_1.check_values()
+    dropdown.dropdown_1.choose()
 
-    dropdown.check_options_in_dropdown_2()
-    dropdown.choose_value_in_dropdown_2()
+    dropdown.dropdown_2.check_values()
+    dropdown.dropdown_2.choose()

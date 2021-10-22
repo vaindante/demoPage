@@ -1,10 +1,9 @@
 import time
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
+from pages.base import BasePage
 
 
-class RegistrationPage:
+class RegistrationPage(BasePage):
     login_xpath = '//input[@name="username"]'
     password_xpath = '//input[@name="password"]'
 
@@ -19,13 +18,6 @@ class RegistrationPage:
     option_2_3_xpath = '//option[contains(@text, "user")]'
 
     button = '//button[@name="submit"]'
-
-    def __init__(self, driver):
-        self.driver = driver
-        self.wd = WebDriverWait(self.driver, 10)
-
-    def find_xpath(self, xpath):
-        return self.wd.until(self.driver.find_element, (By.XPATH, xpath))
 
     def check_options_in_dropdown_1(self):
         dropdown_1 = self.find_xpath(self.dropdown_xpath_1)

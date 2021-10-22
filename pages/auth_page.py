@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-class AuthPages:
+class AuthPage:
     login_xpath = '//input[@name="username"]'
     password_xpath = '//input[@name="password"]'
     button = '//button[@name="submit"]'
